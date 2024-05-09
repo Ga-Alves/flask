@@ -70,7 +70,7 @@ def create_logger(app: App) -> logging.Logger:
     """
     logger = logging.getLogger(app.name)
 
-    if app.debug and not logger.level:
+    if app.debug and logger.level:
         logger.setLevel(logging.DEBUG)
 
     if not has_level_handler(logger):
